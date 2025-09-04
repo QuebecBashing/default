@@ -1,0 +1,9 @@
+name: Deployment Status
+on:
+  deployment_status:
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "legit"
