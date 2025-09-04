@@ -8,3 +8,8 @@ jobs:
     environment: internal
     steps:
       - run: echo "test"
+  b:
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+      - run: echo "test"
