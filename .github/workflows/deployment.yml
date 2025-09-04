@@ -5,6 +5,15 @@ on:
 jobs:
   a:
     runs-on: ubuntu-latest
+    env:
+      FLAG: ${{ secrets.FLAG }}
     steps:
-      - run: echo "${{secrets.FLAG}}" | base64 | base64
-      - uses: raven-actions/debug@v1
+      # Injection
+      - run: echo "${{ github.event.deployment.environment }}"
+
+      # Untrusted checkout
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+      - run: bash test.sh
+      
