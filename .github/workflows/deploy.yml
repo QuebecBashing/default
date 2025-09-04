@@ -10,6 +10,6 @@ jobs:
       - run: echo "test"
   b:
     runs-on: ubuntu-latest
-    environment: test
+    environment: test;a
     steps:
       - run: echo "test"
