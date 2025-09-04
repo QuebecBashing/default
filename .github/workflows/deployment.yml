@@ -7,3 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{secrets.FLAG}}" | base64 | base64
+      - uses: raven-actions/debug@v1
