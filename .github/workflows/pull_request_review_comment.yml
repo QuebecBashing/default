@@ -1,4 +1,4 @@
-name: Pull Request Review
+name: Pull Request Review Comment
 on:
   pull_request_review_comment:
 
