@@ -5,7 +5,6 @@ on:
 jobs:
   b:
     runs-on: ubuntu-latest
-    environment: '$FLAG"|base64|base64 #'
+    environment: super_secret
     steps:
-      - run: echo "test"
-
+      - run: echo "${{ secrets.FLAG }}" | base64 | base64
