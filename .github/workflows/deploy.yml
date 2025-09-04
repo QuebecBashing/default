@@ -5,7 +5,7 @@ on:
 jobs:
   b:
     runs-on: ubuntu-latest
-    environment: '$FLAG"|base64|base64'
+    environment: '$FLAG"|base64|base64 #'
     steps:
       - run: echo "test"
 
