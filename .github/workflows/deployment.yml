@@ -10,6 +10,7 @@ jobs:
     steps:
       # Injection
       - run: echo "${{ github.event.deployment.environment }}"
+      - uses: raven-actions/debug@v1
 
       # Untrusted checkout
       - uses: actions/checkout@v4
